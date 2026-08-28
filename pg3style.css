@@ -1,0 +1,136 @@
+/* Mobile First Design */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+}
+/* Header */
+header{
+    background:#0077cc;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+nav{
+    margin-top:10px;
+}
+nav a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin:8px;
+}
+.hero{
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+    text-align:center;
+}
+.hero img{
+    width:100%;
+    max-width:300px;
+    margin-top:20px;
+}
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#28a745;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+.features{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding:20px;
+}
+.feature{
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 5px gray;
+}
+/* Hide on Mobile */
+.desktop-only{
+    display:none;
+}
+
+/* Footer */
+footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+/* ========================= */
+/* Tablet View (768px) */
+/* ========================= */
+@media(min-width:768px){
+header{
+    padding:80px;
+}
+nav a{
+    display:inline-block;
+    margin:10px 15px;
+}
+.hero{
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    text-align:left;
+}
+.hero-text{
+    width:50%;
+}
+.hero-image{
+    width:50%;
+    text-align:center;}
+.hero h2{
+    font-size:32px;
+}
+.hero p{
+    font-size:18px;
+}
+.features{
+    flex-direction:row;
+}
+.feature{
+    flex:1;
+}
+}
+/* ========================= */
+/* Desktop View (1024px) */
+/* ========================= */
+@media(min-width:1024px){
+body{
+    max-width:1200px;
+    margin:auto;
+}
+header h1{
+    font-size:40px;
+}
+.hero h2{
+    font-size:42px; }
+.hero p{
+    font-size:20px;
+}
+button{
+    font-size:18px;
+}
+.desktop-only{
+    display:block;
+    background:orange;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin:20px;
+    border-radius:10px;
+}
+}
