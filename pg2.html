@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meat charset="UTF-8">
+<meat name="viewport" content="width=device-width,intitial-scale=1.0">
+<title>Responsive Layout using  Flexbox and Grid</title>
+<style>
+
+/*Reset Default Margin and padding*/
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+font-family:Arial,sans-serif;
+background:#f4f4f4;
+}
+
+/*Grid Container*/
+.container{
+displayL:grid;
+grid-template-areas:
+"header header"
+"sidebar content"
+"footer footer";
+grid-template-columns:250px 1fr;
+grid-template-rows:80px auto 70px;
+min-height:100vh;
+}
+
+/*Header*/
+header{
+grid-area:header;
+background:#0077cc;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center
+font-size:28px;
+}
+
+/*Sidebar*/
+aside{
+grid-area:sidebar;
+background:#dddddd;
+padding:20px;
+border-right:2px solid gray;
+}
+aside h2{
+margin-bottom:15px;
+}
+aside ul{
+list-style:none;
+}
+aside li{
+margin:15px 0;
+}
+aside a{
+text-decoration:none;
+color:black;
+font-blue:bold;
+}
+aside a:hover{
+color:blue;
+}
+
+/*Main Content*/
+main{
+grid-area:content;
+padding:20px;
+}
+.card-container{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:space-around;
+}
+.card{
+background:white;
+border:20px splid gray;
+width:250px;
+padding:20px;
+margin:10px;
+text-align:center;
+box-shadow:2px 2px 8px gray;
+}
+.card h3{
+margin-bottom:10px;
+}
+.card p{
+margin-bottom:15px;
+}
+.card button{
+padding:10px 20 px;
+background:#0077cc;
+color:white;
+border:none;
+cursor:pointer;
+}
+.card button:hover{
+background:darkblue;
+}
+
+/*Footer*/
+footer{
+grid-area:footer;
+background:#33;
+color:white;
+display:flex;
+jusify-content:center;
+align-itens:center;
+
+/*Responsive Design*/
+@media(max-width:768px){
+.container{
+grid-template-areas:
+"header"
+"sidebar"
+"footer";
+grid-template-columns:1fr;
+}
+.card-container{
+flex-direction:column;
+align-items:center;
+}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!--header-->
+<header>
+Responsive Website Layout
+</header>
+<!--Sidebar-->
+<aside>
+<h2>Menu</h2>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services<?/a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</aside>
+
+<!--Content-->
+<main>
+<h2>Welcome</h2>
+<br>
+<p>
+   This webpage demonstrates CSS Grid for page layout,
+Flexbox for card arrangement, and proper use of the
+CSS Box Model including margin,padding,and border.
+</p>
+<br>
+<div class="card-container">
+<div class="card">
+<h3>HTML</h3>
+<p>Structure of the webpage.</p>
+<button>Read more</button>
+</div>
+<div class="card">
+<h3>CSS</h3>
+<p>Design and styling of webpage,</p>
+<button>Read More</button>
+</div>
+<div class="card">
+<h3>javascript</h3>
+<p>Adds interacitivity to webpage.</p>
+<button>Read more</button>
+</div>
+</div>
+</main>
+
+<!--Footer-->
+<footer>
+@ 2026 BCA Responsive Layout Practical
+</footer>
+</div>
+</body>
+</html>
